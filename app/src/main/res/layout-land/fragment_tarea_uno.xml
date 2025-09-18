@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentos.FragmentTareaUno" >
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey_light"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/btn_cancelar"
+        android:textAlignment="center"
+        android:textColor="@color/grey_dark"
+        android:textSize="18sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFechaCreacionTareaFragment"
+        app:layout_constraintVertical_bias="0.327" />
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey_light"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/btn_siguiente"
+        android:textAlignment="center"
+        android:textColor="@color/grey_dark"
+        android:textSize="18sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.799"
+        app:layout_constraintStart_toEndOf="@+id/switchPrioritaria"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerProgreso"
+        app:layout_constraintVertical_bias="0.327" />
+
+    <TextView
+        android:id="@+id/tvFechaObjetivoTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_fecha_objetivo"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.249"
+        app:layout_constraintStart_toEndOf="@+id/etTituloTareaFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <TextView
+        android:id="@+id/tvProgresoTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_progreso"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toEndOf="@+id/etFechaCreacionTareaFragment"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaObjetivoTareaFragment"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <Spinner
+        android:id="@+id/spinnerProgreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/opciones_progreso"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toEndOf="@+id/tvProgresoTareaFragment"
+        app:layout_constraintTop_toBottomOf="@+id/etFechaObjetivoTareaFragment"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <EditText
+        android:id="@+id/etFechaObjetivoTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/tv_fecha_objetivo"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="@color/grey_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toEndOf="@+id/tvFechaObjetivoTareaFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <EditText
+        android:id="@+id/etFechaCreacionTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/tv_fecha_creacion"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="@color/grey_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvFechaObjetivoTareaFragment"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toEndOf="@+id/tvFechaCreacionTareaFragment"
+        app:layout_constraintTop_toBottomOf="@+id/etTituloTareaFragment"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchPrioritaria"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="false"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="@string/tv_prioritaria"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProgresoTareaFragment"
+        app:layout_constraintVertical_bias="0.238"
+        app:thumbTint="@color/switch_thumb_color"
+        app:trackTint="@color/switch_track_color" />
+
+    <EditText
+        android:id="@+id/etTituloTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/titulo_tarea"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="@color/grey_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSiguiente"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/tvTituloTareaFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/tvFechaCreacionTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_fecha_creacion"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloTareaFragment"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <TextView
+        android:id="@+id/tvTituloTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_tarea"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

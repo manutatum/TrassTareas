@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group_gestion"
+        android:orderInCategory="100">
+        <item
+            android:id="@+id/it_crear_tarea"
+            android:contentDescription="@string/it_crear_desc"
+            android:icon="@drawable/outline_add_task_24"
+            android:title="@string/it_crear_tarea"
+            app:showAsAction="ifRoom|withText" />
+        <item
+            android:id="@+id/it_prioritarias"
+            android:contentDescription="@string/it_prioritarias_desc"
+            android:icon="@drawable/star_no_prioritaria_50"
+            android:title="@string/it_prioritarias"
+            app:showAsAction="ifRoom|withText" />
+    </group>
+    <group
+        android:id="@+id/group_info"
+        android:orderInCategory="200">
+        <item
+            android:id="@+id/it_preferencias"
+            android:title="@string/it_preferencias" />
+        <item
+            android:id="@+id/it_acerca"
+            android:title="@string/it_acerca" />
+        <item
+            android:id="@+id/it_estadisticas"
+            android:title="@string/it_estadisticas" />
+        <item
+            android:id="@+id/it_salir"
+            android:title="@string/it_salir" />
+    </group>
+</menu>

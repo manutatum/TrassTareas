@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fuente_pequeña">12sp</dimen>
+    <dimen name="fuente_mediana">16sp</dimen>
+    <dimen name="fuente_grande">20sp</dimen>
+</resources>

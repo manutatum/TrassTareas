@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Acceso a los archivos internos de la app -->
+    <files-path
+        name="archivos_adjuntos"
+        path="archivos_adjuntos/" />
+
+    <!-- Acceso a la caché de la app -->
+    <cache-path
+        name="ficheros_cache"
+        path="." />
+
+    <!-- Acceso a archivos externos, si los necesitas -->
+    <external-path
+        name="ficheros_externos"
+        path="archivos_adjuntos/" />
+</paths>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentos.FragmentTareaUno" >
+
+    <TextView
+        android:id="@+id/tvTituloTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_tarea"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/tvFechaObjetivoTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_fecha_objetivo"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaCreacionTareaFragment"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <EditText
+        android:id="@+id/etTituloTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/titulo_tarea"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="@color/grey_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toEndOf="@+id/tvTituloTareaFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <TextView
+        android:id="@+id/tvFechaCreacionTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_fecha_creacion"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloTareaFragment"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <EditText
+        android:id="@+id/etFechaCreacionTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/tv_fecha_creacion"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="@color/grey_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toEndOf="@+id/tvFechaCreacionTareaFragment"
+        app:layout_constraintTop_toBottomOf="@+id/etTituloTareaFragment"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <EditText
+        android:id="@+id/etFechaObjetivoTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/tv_fecha_objetivo"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="@color/grey_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintStart_toEndOf="@+id/tvFechaObjetivoTareaFragment"
+        app:layout_constraintTop_toBottomOf="@+id/etFechaCreacionTareaFragment"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <TextView
+        android:id="@+id/tvProgresoTareaFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_progreso"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaObjetivoTareaFragment"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <Spinner
+        android:id="@+id/spinnerProgreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/opciones_progreso"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toEndOf="@+id/tvProgresoTareaFragment"
+        app:layout_constraintTop_toBottomOf="@+id/etFechaObjetivoTareaFragment"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchPrioritaria"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="false"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="@string/tv_prioritaria"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProgresoTareaFragment"
+        app:layout_constraintVertical_bias="0.075"
+        app:thumbTint="@color/switch_thumb_color"
+        app:trackTint="@color/switch_track_color" />
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey_light"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/btn_siguiente"
+        android:textAlignment="center"
+        android:textColor="@color/grey_dark"
+        android:textSize="18sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchPrioritaria"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/grey_light"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/btn_cancelar"
+        android:textAlignment="center"
+        android:textColor="@color/grey_dark"
+        android:textSize="18sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchPrioritaria"
+        app:layout_constraintVertical_bias="0.11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

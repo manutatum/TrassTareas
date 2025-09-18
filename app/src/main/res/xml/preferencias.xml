@@ -1,0 +1,98 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:title="@string/preferencia_visualizacion"
+        app:icon="@drawable/outline_eye_48">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="preferenciasTema"
+            android:title="@string/preferencia_tema"
+            app:summaryOff="@string/preferencia_switch_oscuro"
+            app:summaryOn="@string/preferencia_switch_claro" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/preferencias_letra_entry"
+            android:entryValues="@array/preferencias_letra_valores"
+            android:key="preferenciasFuente"
+            android:title="@string/preferencia_tamaño_letra"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/preferencia_ordenacion"
+        app:icon="@drawable/baseline_order_48">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/preferencias_ordenacion_entry"
+            android:entryValues="@array/preferencias_ordenacion_valores"
+            android:key="preferenciasCriterio"
+            android:title="@string/preferencia_criterio"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="preferenciasOrden"
+            android:title="@string/preferencia_ordenacion"
+            app:summaryOff="@string/orden_desc"
+            app:summaryOn="@string/orden_asc" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/preferencia_almacenamiento"
+        app:icon="@drawable/outline_sd_storage_48">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preferencia_sd"
+            android:title="@string/preferencia_sd" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="preferencia_bd"
+            android:title="@string/preferencia_bd"
+            app:summaryOff="@string/bd_interna"
+            app:summaryOn="@string/bd_externa" />
+        <PreferenceCategory
+            android:title="@string/preferencia_bd_externa"
+            app:dependency="preferencia_bd"
+            app:icon="@drawable/outline_dataset_48">
+
+            <EditTextPreference
+                android:key="preferencia_nombrebd"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="@string/preferencia_nombrebd"
+                app:useSimpleSummaryProvider="true" />
+            <EditTextPreference
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:key="preferencia_ip"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="@string/preferencia_ip"
+                app:useSimpleSummaryProvider="true" />
+            <EditTextPreference
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:key="preferencia_puerto"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="@string/preferencia_puerto"
+                app:useSimpleSummaryProvider="true" />
+            <EditTextPreference
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:key="preferencia_usuario"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="@string/preferencia_usuario"
+                app:useSimpleSummaryProvider="true" />
+            <EditTextPreference
+                android:key="preferencia_password"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="@string/preferencia_password"
+                app:useSimpleSummaryProvider="true" />
+        </PreferenceCategory>
+    </PreferenceCategory>
+</PreferenceScreen>

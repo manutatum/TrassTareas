@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey_dark">#626262</color>
+    <color name="grey_light">#C9C9C9</color>
+    <color name="color_estrella">#FFD700</color>
+    <color name="fecha_atrasada">#FA2525</color>
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:minHeight="100dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        tools:ignore="TextSizeCheck">
+
+        <!-- Contenido dentro del CardView -->
+        <RelativeLayout
+            android:id="@+id/contenedor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="100dp">
+
+            <ImageView
+                android:id="@+id/imgPrioridad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:srcCompat="@drawable/star_prioritaria_24" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_toEndOf="@id/imgPrioridad"
+                android:drawablePadding="10dp"
+                android:text="@string/titulo_tarea"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitulo"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/barraProgreso"
+                android:text="@string/tvFecha"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvTextoDias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitulo"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/tvDiasRestantes"
+                android:text="@string/tvTextoDias"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvQuedan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitulo"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/tvFecha"
+                android:text="@string/tvQuedan"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvDiasRestantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitulo"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/tvQuedan"
+                android:text="@string/tvDias"
+                android:textSize="14sp" />
+
+            <ProgressBar
+                android:id="@+id/barraProgreso"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitulo"
+                android:layout_marginTop="27dp"
+                android:layout_marginBottom="10dp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
